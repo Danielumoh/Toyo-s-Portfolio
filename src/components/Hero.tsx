@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="bg-white px-6 md:px-16 py-20 md:py-28">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 className="text-4xl whitespace-nowrap md:text-5xl font-medium text-[#111111] leading-tight">
+          <h1 className="text-4xl md:text-5xl font-medium text-[#111111] leading-tight">
             Hi, I’m Jesutoyosi Kayode. <br />
           </h1>
           <p className="mt-2 text-[#6B6B6B] font-medium tracking-wide opacity-0 animate-[fadeIn_0.8s_ease-out_0.8s_forwards]">
