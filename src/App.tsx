@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ContentShowcase from "./components/ContentShowcase";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -12,6 +13,7 @@ function App() {
       <About />
       <Services />
       <Experience />
+      <ContentShowcase />
       <Contact />
       <Footer />
     </div>
