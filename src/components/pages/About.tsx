@@ -17,11 +17,11 @@ export default function About() {
         </p>
 
         {/* Placeholder — replace with real expanded content later */}
-        <p className="mt-4 text-[#6B6B6B] font-light leading-relaxed">
+        {/* <p className="mt-4 text-[#6B6B6B] font-light leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris.
-        </p>
+        </p> */}
 
         <p className="mt-6 text-[#6B6B6B] font-light text-sm">
           B.Ed. Education & English Language — University of Lagos · Virtual
