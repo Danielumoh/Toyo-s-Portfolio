@@ -27,7 +27,7 @@ export default function ContentShowcase() {
               href={video.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block border border-[#E3E3E3] rounded-xl px-6 py-8 text-center hover:border-[#111111] transition-colors"
+              className="hover-card block border border-[#E3E3E3] rounded-xl px-6 py-8 text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
             >
               <span className="text-[#111111] font-medium">{video.title}</span>
               <span className="block mt-1 text-sm text-[#6B6B6B] font-light">

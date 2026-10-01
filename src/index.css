@@ -1,6 +1,56 @@
 @import "tailwindcss";
+
+:root {
+  --color-accent: #7a1f3d;
+}
 body {
   font-family: "Roboto", sans-serif;
+}
+
+.hover-card {
+  transition: background-color 300ms ease, border-color 300ms ease,
+    color 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+}
+
+.hover-card :where(h1, h2, h3, p, li, a, span) {
+  transition: color 300ms ease, background-color 300ms ease,
+    border-color 300ms ease;
+}
+
+.hover-card:is(:hover, :focus-within) {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+.hover-card:is(:hover, :focus-within) :where(h1, h2, h3, p, li, a, span) {
+  color: white;
+}
+
+.hover-card:is(:hover, :focus-within) a {
+  background-color: transparent;
+  border-color: white;
+  outline-color: white;
+}
+
+.hover-card .card-accent {
+  transition: background-color 300ms ease;
+}
+
+.hover-card:is(:hover, :focus-within) .card-accent {
+  background-color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-card,
+  .hover-card * {
+    transition: none;
+  }
+
+  .hover-card:hover {
+    transform: none;
+    translate: none;
+  }
 }
 
 @keyframes fadeIn {

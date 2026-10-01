@@ -1,3 +1,5 @@
+import Card from "../Card";
+
 const services = [
   {
     title: "Social Media Management",
@@ -40,14 +42,14 @@ export default function Services() {
         </h2>
         <div className="mt-10 grid md:grid-cols-2 gap-x-12 gap-y-10">
           {services.map((service) => (
-            <div key={service.title} className="border-t border-[#E3E3E3] pt-4">
+            <Card key={service.title}>
               <h3 className="text-lg font-medium text-[#111111]">
                 {service.title}
               </h3>
               <p className="mt-2 text-[#6B6B6B] font-light">
                 {service.description}
               </p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

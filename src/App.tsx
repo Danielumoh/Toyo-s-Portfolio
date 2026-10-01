@@ -1,22 +1,26 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import ContentShowcase from "./components/ContentShowcase";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Services from "./components/pages/Services";
+import Experience from "./components/pages/Experience";
+import Contact from "./components/pages/Contact";
+import ContentShowcase from "./components/pages/ContentShowcase";
 
 function App() {
   return (
-    <div>
-      <Hero />
-      <About />
-      <Services />
-      <Experience />
-      <ContentShowcase />
-      <Contact />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="content" element={<ContentShowcase />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

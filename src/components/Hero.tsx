@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="bg-white px-6 md:px-16 py-20 md:py-28">
@@ -16,18 +18,18 @@ export default function Hero() {
             Facebook, and X.
           </p>
           <div className="mt-8 flex gap-4">
-            <a
-              href="#services"
+            <Link
+              to="/services"
               className="bg-[#111111] text-white px-6 py-3 text-sm font-medium hover:bg-black transition-colors"
             >
               See what I do
-            </a>
-            <a
-              href="#contact"
-              className="border border-[#E3E3E3] text-[#111111] px-6 py-3 text-sm font-medium hover:border-[#111111] transition-colors"
+            </Link>
+            <Link
+              to="/contact"
+              className="border border-[#E3E3E3] text-[#111111] px-6 py-3 text-sm font-medium hover:border-[color:var(--color-accent)] transition-colors"
             >
               Get in touch
-            </a>
+            </Link>
           </div>
         </div>
 

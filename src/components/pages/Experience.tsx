@@ -1,3 +1,5 @@
+import Card from "../Card";
+
 const experience = [
   {
     role: "Social Media Manager",
@@ -34,7 +36,7 @@ export default function Experience() {
         </h2>
         <div className="mt-10 space-y-10">
           {experience.map((job) => (
-            <div key={job.company}>
+            <Card key={job.company}>
               <h3 className="text-lg font-medium text-[#111111]">{job.role}</h3>
               <p className="text-sm text-[#6B6B6B]">{job.company}</p>
               <ul className="mt-3 space-y-1">
@@ -44,7 +46,7 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
