@@ -646,6 +646,39 @@ Do not add performance results until verified.
 
 ---
 
+---
+
+## Avaleads
+
+### Role
+
+**Social Media Manager & Content Creator**
+
+### Summary
+
+Jesutoyosi has experience working with Avaleads as a Social Media
+Manager and Content Creator.
+
+Detailed responsibilities, platforms, content types, campaigns and
+performance results have not yet been confirmed.
+
+### Current Verified Positioning
+
+`Social Media Management` `Content Creation`
+
+### Implementation Notes
+
+- Include Avaleads as a full experience entry alongside AJIOOR Sports
+  Intelligence, Asteroid Ideas and Buy & Use (Suprotech).
+- Do not invent responsibilities, platforms, metrics, campaigns or
+  achievements.
+- The component must support incomplete experience data gracefully.
+- Do not display empty headings or placeholder text to portfolio visitors.
+- Structure the data so additional Avaleads information can be added
+  later without redesigning the card.
+- If the Experience UI depends on detailed descriptions, use only the
+  verified role information until additional details are confirmed.
+
 ## Asteroid Ideas
 
 ### Role
@@ -976,6 +1009,21 @@ The following may require Jesutoyosi's confirmation later:
 - project screenshots,
 - video thumbnails,
 - additional qualifications.
+
+### Avaleads information to confirm later
+
+- employment period
+- platforms managed
+- content types created
+- social media management responsibilities
+- content creation responsibilities
+- campaigns/projects worked on
+- quantity of content produced
+- audience/community responsibilities
+- performance metrics
+- notable results
+- screenshots/content samples
+- tools used
 
 The site should work elegantly without these fields.
 
