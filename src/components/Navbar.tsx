@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const links = [
@@ -10,16 +11,48 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
   return (
-    <nav className="bg-white border-b border-[#E3E3E3] px-6 md:px-16 py-5">
-      <div className="max-w-6xl mx-auto flex justify-end items-center gap-2">
+    <nav
+      aria-label="Main navigation"
+      className="bg-white border-b border-[#E3E3E3] px-6 md:px-16 py-5"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && isMenuOpen) {
+          setIsMenuOpen(false);
+          menuButtonRef.current?.focus();
+        }
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="flex justify-end lg:hidden">
+          <button
+            ref={menuButtonRef}
+            type="button"
+            aria-expanded={isMenuOpen}
+            aria-controls="navigation-links"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            className="inline-flex min-h-11 items-center gap-2 rounded-md border border-[#E3E3E3] px-4 py-2 text-sm text-[#111111] transition-colors hover:bg-[var(--color-accent)] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+          >
+            <span>{isMenuOpen ? "Close menu" : "Menu"}</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d={isMenuOpen ? "M6 6l12 12M6 18L18 6" : "M4 6h16M4 12h16M4 18h16"} />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="navigation-links"
+          className={`${isMenuOpen ? "flex" : "hidden"} mt-4 flex-col gap-2 lg:mt-0 lg:flex lg:flex-row lg:justify-end lg:items-center`}
+        >
         {links.map((link) => (
           <NavLink
             key={link.to}
             to={link.to}
             end={link.isHome}
+            onClick={() => setIsMenuOpen(false)}
             className={({ isActive }) =>
-              `px-4 py-2 text-sm rounded-md transition-all duration-300 ${
+              `flex min-h-11 items-center px-4 py-2 text-sm whitespace-nowrap rounded-md transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] ${
                 link.isHome
                   ? isActive
                     ? "text-[#111111] font-medium"
@@ -35,6 +68,7 @@ export default function Navbar() {
             {link.label}
           </NavLink>
         ))}
+        </div>
       </div>
     </nav>
   );
