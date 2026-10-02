@@ -24,7 +24,12 @@ export const experiences: Experience[] = [
       "Developed captions and calls-to-action for different content formats.",
       "Adapted communication for multiple social platforms while maintaining brand consistency.",
     ],
-    focus: ["Multi-platform Publishing", "Audience Engagement", "Brand Voice", "Content Planning"],
+    focus: [
+      "Multi-platform Publishing",
+      "Audience Engagement",
+      "Brand Voice",
+      "Content Planning",
+    ],
   },
   {
     id: "avaleads",
@@ -44,7 +49,12 @@ export const experiences: Experience[] = [
       "Developed storytelling-led captions designed to communicate the value of client work.",
       "Translated business and project information into social content ideas.",
     ],
-    focus: ["Content Calendars", "Brand Storytelling", "Copywriting", "Content Ideation"],
+    focus: [
+      "Content Calendars",
+      "Brand Storytelling",
+      "Copywriting",
+      "Content Ideation",
+    ],
   },
   {
     id: "buy-and-use",
@@ -60,7 +70,13 @@ export const experiences: Experience[] = [
       "Delivered content on camera.",
       "Helped create a consistent stream of social-first video content.",
     ],
-    focus: ["Ideation", "Scripting", "Creative Direction", "On-camera", "Short-form Content"],
-    metrics: [{ value: "~50", label: "Short-form videos created" }],
+    focus: [
+      "Ideation",
+      "Scripting",
+      "Creative Direction",
+      "On-camera",
+      "Short-form Content",
+    ],
+    metrics: [{ value: "50", label: "Short-form videos created" }],
   },
 ];

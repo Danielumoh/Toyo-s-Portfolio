@@ -3,21 +3,21 @@
 const contacts = [
   {
     title: "Email",
-    description: "For project enquiries and collaborations.",
+    description: "For projects, collaborations and opportunities.",
     label: "jesutoyosikayode@gmail.com",
     href: "mailto:jesutoyosikayode@gmail.com",
     external: false,
   },
   {
     title: "WhatsApp",
-    description: "Send me a message and let's talk about your ideas.",
+    description: "Have something in mind? Let's talk.",
     label: "+234 808 973 8697",
     href: "https://wa.me/2348089738697",
     external: true,
   },
   {
     title: "LinkedIn",
-    description: "Connect with me professionally and explore my experience.",
+    description: "Connect professionally and explore my experience.",
     label: "Connect on LinkedIn",
     href: "https://www.linkedin.com/in/jesutoyosi-kayode-ab3633315",
     external: true,
@@ -36,19 +36,26 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-white px-6 md:px-16 py-20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-medium text-[#111111]">
-          Get in touch
-        </h2>
-        <p className="mt-4 text-[#6B6B6B] font-light max-w-md">
-          Have a project in mind? Choose the best way to reach me.
-        </p>
+        <h1 className="max-w-3xl text-2xl md:text-3xl font-medium text-[#111111]">
+          Have a brand, campaign or story worth talking about?
+        </h1>
+        <div className="mt-4 max-w-2xl space-y-4 text-[#6B6B6B] font-light leading-relaxed">
+          <p>
+            I'm open to social media management, content strategy, content
+            creation and creative collaborations.
+          </p>
+          <p>
+            If you're looking for someone who can help figure out what to say,
+            how to say it and turn the idea into content, let's talk.
+          </p>
+        </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {contacts.map((contact) => (
             <Card key={contact.title} className="flex flex-col bg-[#F7F7F7]">
-              <h3 className="text-lg font-medium text-[#111111]">
+              <h2 className="text-lg font-medium text-[#111111]">
                 {contact.title}
-              </h3>
+              </h2>
               <p className="mt-2 mb-6 text-sm text-[#6B6B6B] font-light leading-relaxed">
                 {contact.description}
               </p>
@@ -56,7 +63,7 @@ export default function Contact() {
                 href={contact.href}
                 target={contact.external ? "_blank" : undefined}
                 rel={contact.external ? "noopener noreferrer" : undefined}
-                className="mt-auto self-start max-w-full break-words rounded-sm text-sm font-medium text-[var(--color-accent)] underline underline-offset-4 hover:text-[#111111] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+                className="mt-auto inline-flex min-h-11 items-center self-start max-w-full break-all rounded-sm text-sm font-medium text-[var(--color-accent)] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
               >
                 {contact.label}
                 {contact.external && <span className="sr-only"> (opens in a new tab)</span>}
@@ -65,9 +72,9 @@ export default function Contact() {
           ))}
 
           <Card className="bg-[#F7F7F7]">
-            <h3 className="text-lg font-medium text-[#111111]">Social profiles</h3>
+            <h2 className="text-lg font-medium text-[#111111]">Social profiles</h2>
             <p className="mt-2 text-sm text-[#6B6B6B] font-light leading-relaxed">
-              Find my content and connect with me across these platforms.
+              See more of my work and what I'm creating.
             </p>
             <ul className="mt-6 flex flex-wrap gap-2" aria-label="Social platforms">
               {socials.map((social) => (
@@ -76,7 +83,7 @@ export default function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block rounded-full border border-[#E3E3E3] bg-white px-3 py-1.5 text-sm text-[#6B6B6B] transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+                    className="inline-flex min-h-11 items-center rounded-full border border-[#E3E3E3] bg-white px-3 py-1.5 text-sm text-[#6B6B6B] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
                   >
                     {social.label}
                     <span className="sr-only"> (opens in a new tab)</span>
@@ -86,6 +93,9 @@ export default function Contact() {
             </ul>
           </Card>
         </div>
+        <p className="mt-10 text-lg font-medium text-[#111111]">
+          Let's create something worth stopping for.
+        </p>
       </div>
     </section>
   );

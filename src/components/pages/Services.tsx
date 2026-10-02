@@ -1,5 +1,6 @@
 import Card from "../Card";
 import Tag from "../Tag";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -81,6 +82,12 @@ export default function Services() {
             </Card>
           ))}
         </div>
+        <Link
+          to="/experience"
+          className="mt-10 inline-flex min-h-11 items-center rounded-sm text-sm font-medium text-[var(--color-accent)] underline underline-offset-4 hover:text-[#111111] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
+        >
+          See my experience →
+        </Link>
       </div>
     </section>
   );
