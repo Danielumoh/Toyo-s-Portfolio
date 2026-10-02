@@ -29,12 +29,12 @@ export default function Hero() {
             storytelling and social-first content.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
-            <a
-              href="/experience#selected-work"
+            <Link
+              to="/experience"
               className="inline-flex min-h-11 items-center justify-center bg-[#111111] text-white px-6 py-3 text-sm font-medium hover:bg-[var(--color-accent)] focus-visible:bg-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] transition-colors motion-reduce:transition-none"
             >
               Explore my work
-            </a>
+            </Link>
             <Link
               to="/contact"
               className="inline-flex min-h-11 items-center justify-center border border-[#E3E3E3] text-[#111111] px-6 py-3 text-sm font-medium hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] focus-visible:border-[var(--color-accent)] focus-visible:text-[var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] transition-colors motion-reduce:transition-none"
